@@ -1,8 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Header from './components/common/Header'
 import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const App = () => {
+  return (
+  <div>
+    <Header />
+    <h1>Beer-app</h1>
+  </div>
+  );
+}
+
+ReactDOM.render(
+<App />, 
+document.getElementById('root'));
