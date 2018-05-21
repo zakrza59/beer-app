@@ -1,5 +1,6 @@
 import React from 'react';
 import { handleResponse } from '../../helpers';
+import { API_URL } from '../../config';
 
 class List extends React.Component {
   constructor() {
@@ -15,7 +16,7 @@ class List extends React.Component {
   componentDidMount() {
     this.setState({ loading: true });
 
-    fetch('https://api.punkapi.com/v2/beers?page=1&per_page=20')
+    fetch(`${API_URL}?page=1&per_page=20`)
     .then(handleResponse)
     .then((data) => {
       this.setState({ 
