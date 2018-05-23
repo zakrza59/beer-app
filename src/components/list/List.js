@@ -18,9 +18,11 @@ class List extends React.Component {
 
     fetch(`${API_URL}?page=1&per_page=20`)
     .then(handleResponse)
+
     .then((data) => {
+      console.log('Success', data);
       this.setState({ 
-        beers: data.beers, 
+        beers: data, 
         loading: false 
       });
     });
@@ -33,7 +35,11 @@ class List extends React.Component {
     }
 
     return (
-      <div>text</div>
+      <div>
+        {this.state.beers.map((beer) => (
+          <div key={beer.id}>{beer.name}</div>
+        ))}
+      </div>
     );
   }
 }
