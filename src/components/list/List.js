@@ -1,6 +1,7 @@
 import React from 'react';
 import { handleResponse } from '../../helpers';
 import { API_URL } from '../../config';
+import './Table.css'
 
 class List extends React.Component {
   constructor() {
@@ -33,12 +34,28 @@ class List extends React.Component {
     if (this.state.loading) {
       return <div>Loading...</div>
     }
-
     return (
-      <div>
-        {this.state.beers.map((beer) => (
-          <div key={beer.id}>{beer.name}</div>
-        ))}
+      <div className="Table-container">
+        <table className="Table">
+          <thead className="Table-head">
+            <tr>
+              <th>Name</th>
+              <th>Image</th>
+              <th>Tagline</th>
+            </tr>
+          </thead>
+          <tbody className="Table-body">
+            {this.state.beers.map((beer) => (
+            <tr key={beer.id}>
+              <td>
+                {beer.name}
+              </td>
+              <td><img src={beer.image_url}/></td>
+              <td>"{beer.tagline}"</td>
+            </tr>
+            ))}
+          </tbody>
+        </table>  
       </div>
     );
   }

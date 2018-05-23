@@ -1,0 +1,39 @@
+.Table-container {
+  overflow-x: auto; /* Needed for table to be responsive */
+}
+
+.Table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.Table-head {
+  background-color: #3bf7af;
+}
+
+.Table-head tr th {
+  padding: 10px 20px;
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  
+}
+
+.Table-body {
+  text-align: center;
+  background-color: #98ffd7;
+}
+
+.Table-body tr td {
+  padding: 24px 20px;
+  border-bottom: 2px solid #d6ff0a;
+  color: #f9423a;
+  cursor: pointer;
+}
+
+.Table-body tr td img{
+  /* min-width: 14%; */
+  max-height: 115px;
+}
