@@ -10,7 +10,6 @@ class List extends React.Component {
     this.state = {
       loading: false,
       beers: [],
-      error: null,
     };
   }
 
@@ -31,7 +30,10 @@ class List extends React.Component {
   }
 
   render() {
-    if (this.state.loading) {
+
+    const { loading, beers } = this.state;
+
+    if (loading) {
       return <div>Loading...</div>
     }
     return (
@@ -39,18 +41,18 @@ class List extends React.Component {
         <table className="Table">
           <thead className="Table-head">
             <tr>
-              <th>Name</th>
+              <th width="35%">Name</th>
               <th>Image</th>
-              <th>Tagline</th>
+              <th width="35%">Tagline</th>
             </tr>
           </thead>
           <tbody className="Table-body">
-            {this.state.beers.map((beer) => (
+            {beers.map((beer) => (
             <tr key={beer.id}>
               <td>
                 {beer.name}
               </td>
-              <td><img src={beer.image_url}/></td>
+              <td><img src={beer.image_url} alt={beer.id} /></td>
               <td>"{beer.tagline}"</td>
             </tr>
             ))}
