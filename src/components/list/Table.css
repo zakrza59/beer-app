@@ -9,7 +9,7 @@
 }
 
 .Table-head {
-  background-color: #3bf7af;
+  background-color: #4c5551;
 }
 
 .Table-head tr th {
@@ -23,17 +23,15 @@
 
 .Table-body {
   text-align: center;
-  background-color: #98ffd7;
+  background-color: #343b39;
 }
 
 .Table-body tr td {
   padding: 24px 20px;
-  border-bottom: 2px solid #d6ff0a;
-  color: #f9423a;
+  border-bottom: 2px solid #ff0ab5;
   cursor: pointer;
 }
 
 .Table-body tr td img{
-  /* min-width: 14%; */
   max-height: 115px;
 }
