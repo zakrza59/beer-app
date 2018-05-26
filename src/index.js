@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Header from './components/common/Header'
 import List from './components/list/List'
 import NotFound from './components/notfound/NotFound';
+import Modal from './components/modal/Modal';
 import './index.css';
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
         <Header />
         <Switch>
           <Route path="/" component={List} exact />
+          <Route path='/beer/:id' component={Modal} exact />
           <Route component={NotFound} /> 
         </Switch>
       </div>

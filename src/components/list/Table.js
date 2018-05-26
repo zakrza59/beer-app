@@ -1,7 +1,10 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import './Table.css'
 
 const Table = (props) => {
+  const { beers, history } = props;
+
   return (
     <div className="Table-container">
         <table className="Table">
@@ -13,8 +16,11 @@ const Table = (props) => {
             </tr>
           </thead>
           <tbody className="Table-body">
-            {props.beers.map((beer) => (
-            <tr key={beer.id}>
+            {beers.map((beer) => (
+            <tr 
+              key={beer.id}
+              onClick={() => history.push(`/beer/${beer.id}`)}
+            >
               <td>
                 {beer.name}
               </td>
@@ -28,4 +34,4 @@ const Table = (props) => {
   )
 }
 
-export default Table
+export default withRouter(Table);

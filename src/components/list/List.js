@@ -33,7 +33,6 @@ class List extends React.Component {
     .then(handleResponse)
 
     .then((data) => {
-      console.log('Success', data);
       this.setState({ 
         beers: data, 
         loading: false 
