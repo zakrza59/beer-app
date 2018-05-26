@@ -3,7 +3,7 @@
   height: 40px;
   display: inline-block;
   border: 8px solid #ff5a001c;
-  border-top: 8px solid #ff0ab5;
+  border-top: 8px solid #333333;
   border-radius: 50%;
   animation: rotate .6s infinite linear;
 }
