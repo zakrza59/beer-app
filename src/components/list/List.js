@@ -1,6 +1,7 @@
 import React from 'react';
 import { handleResponse } from '../../helpers';
 import { API_URL } from '../../config';
+import Loading from '../loading/Loading.js';
 import Table from './Table.js'
 
 
@@ -35,7 +36,7 @@ class List extends React.Component {
     const { loading, beers } = this.state;
 
     if (loading) {
-      return <div>Loading...</div>
+      return <div className="Loading-container"><Loading /></div>
     }
     return (
       <Table beers={beers} />

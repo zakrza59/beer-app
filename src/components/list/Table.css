@@ -35,3 +35,8 @@
 .Table-body tr td img{
   max-height: 115px;
 }
+
+.Loading-container {
+margin: 5px 0;
+text-align: center;
+}
