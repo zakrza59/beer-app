@@ -21,11 +21,9 @@ const Table = (props) => {
               key={beer.id}
               onClick={() => history.push(`/beer/${beer.id}`)}
             >
-              <td>
-                {beer.name}
-              </td>
+              <td><b>{beer.name}</b></td>
               <td><img src={beer.image_url} alt={beer.id} /></td>
-              <td>"{beer.tagline}"</td>
+              <td><i>"{beer.tagline}"</i></td>
             </tr>
             ))}
           </tbody>

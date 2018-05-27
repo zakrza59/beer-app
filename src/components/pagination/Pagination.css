@@ -7,9 +7,9 @@
   text-align: center;
   border: none;
   border-radius: 16px;
-  background-color: #4997e5;
+  background-color: #b5e0d5;
   transition: background-color .2s;
-  color: white;
+  color: #47ca90;
   cursor: pointer;
   margin: 10px;
   width: 44px;
@@ -17,7 +17,7 @@
 }
 
 .Pagination-button:hover {
-  background-color: #457cb2;
+  color: #000
 }
 
 .Pagination-button:focus {
@@ -25,7 +25,7 @@
 }
 
 .Pagination-button:disabled {
-  background-color: #1f364d;
+  background-color: #ffffff4f;
   cursor: not-allowed;
 }
 

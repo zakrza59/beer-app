@@ -44,22 +44,21 @@ class Modal extends React.Component {
 
         <div className="Modal-container">
           <div className="Modal-item">
-          <span className="Modal-value">{beer.tagline}</span>
+          <span><b><i>"{beer.tagline}"</i></b></span>
           </div>
           <div className="Modal-item">
-            ABV <span className="Modal-value">{beer.abv}</span>
-          </div>
-          <div className="Modal-item">
-            IBU <span className="Modal-value">{beer.ibu}</span>
-          </div>
+            <span className="Modal-text"><b>ABV:</b> {beer.abv}%</span>
+            <span className="Modal-text"><b>IBU:</b> {beer.ibu}</span>
+            <span className="Modal-text"><b>EBC:</b> {beer.ebc}</span>
+          </div>          
           <div className="Modal-item">
             <img src={beer.image_url} alt={beer.id} />
           </div>
-          <div className="Modal-item">
-            <span className="Modal-value">{beer.description}</span>
+          <div className="Modal-item" id="about">
+            <span>{beer.description}</span>
           </div>
-          <div className="Modal-item">
-            <span className="Modal-value">{beer.brewers_tips}</span>
+          <div className="Modal-item" id="tips">
+            <span><i><b>TIPS:</b> {beer.brewers_tips}</i></span>
           </div>
         </div>
       </div>
